@@ -1,9 +1,9 @@
-import './CTA.css';
+import './CTA.css'
 
 interface CTAProps {
-  title?: string;
-  subtitle?: string;
-  buttonText?: string;
+  title?: string
+  subtitle?: string
+  buttonText?: string
 }
 
 function CTA({
@@ -17,11 +17,13 @@ function CTA({
         <div className="cta-glow" />
         <h2 className="cta-title">{title}</h2>
         <p className="cta-subtitle">{subtitle}</p>
-        <a href="#" className="cta-button">{buttonText}</a>
+        <a href="#" className="cta-button">
+          {buttonText}
+        </a>
         <p className="cta-note">No credit card required • 14-day free trial</p>
       </div>
     </section>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -30,7 +32,7 @@ export default function CTAPreview() {
     <div className="preview-container">
       <CTA />
     </div>
-  );
+  )
 }
 
-export { CTA };
+export { CTA }

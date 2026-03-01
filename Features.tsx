@@ -1,9 +1,9 @@
-import './Features.css';
+import './Features.css'
 
 interface Feature {
-  icon: string;
-  title: string;
-  description: string;
+  icon: string
+  title: string
+  description: string
 }
 
 const defaultFeatures: Feature[] = [
@@ -37,10 +37,10 @@ const defaultFeatures: Feature[] = [
     title: 'Global Scale',
     description: 'Built on distributed infrastructure to serve users anywhere in the world.',
   },
-];
+]
 
 interface FeatureCardProps {
-  feature: Feature;
+  feature: Feature
 }
 
 function FeatureCard({ feature }: FeatureCardProps) {
@@ -50,13 +50,13 @@ function FeatureCard({ feature }: FeatureCardProps) {
       <h3 className="feature-title">{feature.title}</h3>
       <p className="feature-description">{feature.description}</p>
     </div>
-  );
+  )
 }
 
 interface FeaturesProps {
-  title?: string;
-  subtitle?: string;
-  features?: Feature[];
+  title?: string
+  subtitle?: string
+  features?: Feature[]
 }
 
 function Features({
@@ -78,7 +78,7 @@ function Features({
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -87,8 +87,8 @@ export default function FeaturesPreview() {
     <div className="preview-container">
       <Features />
     </div>
-  );
+  )
 }
 
-export { Features, FeatureCard };
-export type { Feature };
+export { Features, FeatureCard }
+export type { Feature }

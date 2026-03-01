@@ -1,13 +1,13 @@
-import './Pricing.css';
+import './Pricing.css'
 
 interface PricingPlan {
-  name: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular?: boolean;
-  cta: string;
+  name: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular?: boolean
+  cta: string
 }
 
 const defaultPlans: PricingPlan[] = [
@@ -24,7 +24,13 @@ const defaultPlans: PricingPlan[] = [
     price: '$29',
     period: '/month',
     description: 'For growing teams and businesses',
-    features: ['Unlimited projects', 'Advanced analytics', 'Priority support', '100GB storage', 'Custom domains'],
+    features: [
+      'Unlimited projects',
+      'Advanced analytics',
+      'Priority support',
+      '100GB storage',
+      'Custom domains',
+    ],
     popular: true,
     cta: 'Start Free Trial',
   },
@@ -33,13 +39,19 @@ const defaultPlans: PricingPlan[] = [
     price: 'Custom',
     period: '',
     description: 'For large organizations',
-    features: ['Everything in Pro', 'Dedicated support', 'SLA guarantee', 'SSO & SAML', 'Custom integrations'],
+    features: [
+      'Everything in Pro',
+      'Dedicated support',
+      'SLA guarantee',
+      'SSO & SAML',
+      'Custom integrations',
+    ],
     cta: 'Contact Sales',
   },
-];
+]
 
 interface PricingCardProps {
-  plan: PricingPlan;
+  plan: PricingPlan
 }
 
 function PricingCard({ plan }: PricingCardProps) {
@@ -64,12 +76,12 @@ function PricingCard({ plan }: PricingCardProps) {
         {plan.cta}
       </a>
     </div>
-  );
+  )
 }
 
 interface PricingProps {
-  title?: string;
-  plans?: PricingPlan[];
+  title?: string
+  plans?: PricingPlan[]
 }
 
 function Pricing({ title = 'Simple, Transparent Pricing', plans = defaultPlans }: PricingProps) {
@@ -84,7 +96,7 @@ function Pricing({ title = 'Simple, Transparent Pricing', plans = defaultPlans }
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -93,8 +105,8 @@ export default function PricingPreview() {
     <div className="preview-container">
       <Pricing />
     </div>
-  );
+  )
 }
 
-export { Pricing, PricingCard };
-export type { PricingPlan };
+export { Pricing, PricingCard }
+export type { PricingPlan }

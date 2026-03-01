@@ -24,7 +24,7 @@
 }
 
 .steps-grid::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 40px;
   left: 15%;

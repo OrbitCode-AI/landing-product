@@ -1,9 +1,9 @@
-import './HowItWorks.css';
+import './HowItWorks.css'
 
 interface Step {
-  number: string;
-  title: string;
-  description: string;
+  number: string
+  title: string
+  description: string
 }
 
 const defaultSteps: Step[] = [
@@ -22,10 +22,10 @@ const defaultSteps: Step[] = [
     title: 'Launch',
     description: 'Go live with your product and start seeing results immediately.',
   },
-];
+]
 
 interface StepCardProps {
-  step: Step;
+  step: Step
 }
 
 function StepCard({ step }: StepCardProps) {
@@ -35,12 +35,12 @@ function StepCard({ step }: StepCardProps) {
       <h3 className="step-title">{step.title}</h3>
       <p className="step-description">{step.description}</p>
     </div>
-  );
+  )
 }
 
 interface HowItWorksProps {
-  title?: string;
-  steps?: Step[];
+  title?: string
+  steps?: Step[]
 }
 
 function HowItWorks({ title = 'How It Works', steps = defaultSteps }: HowItWorksProps) {
@@ -55,7 +55,7 @@ function HowItWorks({ title = 'How It Works', steps = defaultSteps }: HowItWorks
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -64,8 +64,8 @@ export default function HowItWorksPreview() {
     <div className="preview-container">
       <HowItWorks />
     </div>
-  );
+  )
 }
 
-export { HowItWorks, StepCard };
-export type { Step };
+export { HowItWorks, StepCard }
+export type { Step }

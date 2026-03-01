@@ -1,39 +1,42 @@
-import './Testimonials.css';
+import './Testimonials.css'
 
 interface Testimonial {
-  quote: string;
-  author: string;
-  role: string;
-  company: string;
-  avatar: string;
+  quote: string
+  author: string
+  role: string
+  company: string
+  avatar: string
 }
 
 const defaultTestimonials: Testimonial[] = [
   {
-    quote: "This product has completely transformed how our team works. We've seen a 40% increase in productivity.",
+    quote:
+      "This product has completely transformed how our team works. We've seen a 40% increase in productivity.",
     author: 'Sarah Chen',
     role: 'CEO',
     company: 'TechCorp',
     avatar: '👩‍💼',
   },
   {
-    quote: "The best investment we've made this year. The onboarding was seamless and support is exceptional.",
+    quote:
+      "The best investment we've made this year. The onboarding was seamless and support is exceptional.",
     author: 'Marcus Johnson',
     role: 'CTO',
     company: 'StartupXYZ',
     avatar: '👨‍💻',
   },
   {
-    quote: "Finally a tool that actually delivers on its promises. Our customers love the new experience.",
+    quote:
+      'Finally a tool that actually delivers on its promises. Our customers love the new experience.',
     author: 'Emily Rodriguez',
     role: 'Product Lead',
     company: 'InnovateCo',
     avatar: '👩‍🔬',
   },
-];
+]
 
 interface TestimonialCardProps {
-  testimonial: Testimonial;
+  testimonial: Testimonial
 }
 
 function TestimonialCard({ testimonial }: TestimonialCardProps) {
@@ -44,16 +47,18 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
         <span className="author-avatar">{testimonial.avatar}</span>
         <div className="author-info">
           <span className="author-name">{testimonial.author}</span>
-          <span className="author-role">{testimonial.role}, {testimonial.company}</span>
+          <span className="author-role">
+            {testimonial.role}, {testimonial.company}
+          </span>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 interface TestimonialsProps {
-  title?: string;
-  testimonials?: Testimonial[];
+  title?: string
+  testimonials?: Testimonial[]
 }
 
 function Testimonials({
@@ -71,7 +76,7 @@ function Testimonials({
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -80,8 +85,8 @@ export default function TestimonialsPreview() {
     <div className="preview-container">
       <Testimonials />
     </div>
-  );
+  )
 }
 
-export { Testimonials, TestimonialCard };
-export type { Testimonial };
+export { Testimonials, TestimonialCard }
+export type { Testimonial }

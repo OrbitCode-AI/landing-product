@@ -1,12 +1,12 @@
-import Navbar from './Navbar';
-import Hero from './Hero';
-import Features from './Features';
-import HowItWorks from './HowItWorks';
-import Testimonials from './Testimonials';
-import Pricing from './Pricing';
-import CTA from './CTA';
-import Footer from './Footer';
-import './styles.css';
+import Navbar from './Navbar'
+import Hero from './Hero'
+import Features from './Features'
+import HowItWorks from './HowItWorks'
+import Testimonials from './Testimonials'
+import Pricing from './Pricing'
+import CTA from './CTA'
+import Footer from './Footer'
+import './styles.css'
 
 export default function App() {
   return (
@@ -20,5 +20,5 @@ export default function App() {
       <CTA />
       <Footer />
     </div>
-  );
+  )
 }

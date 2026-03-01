@@ -1,7 +1,7 @@
-import './Navbar.css';
+import './Navbar.css'
 
 interface NavbarProps {
-  productName?: string;
+  productName?: string
 }
 
 function Navbar({ productName = 'Product' }: NavbarProps) {
@@ -15,11 +15,13 @@ function Navbar({ productName = 'Product' }: NavbarProps) {
         <div className="navbar-links">
           <a href="#features">Features</a>
           <a href="#pricing">Pricing</a>
-          <a href="#" className="navbar-cta">Get Started</a>
+          <a href="#" className="navbar-cta">
+            Get Started
+          </a>
         </div>
       </div>
     </nav>
-  );
+  )
 }
 
 // Default export renders component in isolation for preview
@@ -29,7 +31,7 @@ export default function NavbarPreview() {
       <Navbar />
       <Navbar productName="MyApp" />
     </div>
-  );
+  )
 }
 
-export { Navbar };
+export { Navbar }
